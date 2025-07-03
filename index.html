@@ -2,40 +2,147 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Minha Página Pessoal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Cordeiro Caram - Portfólio Acadêmico</title>
     <style>
+        :root {
+            --primary-color: #2c3e50; /* Azul Marinho Escuro */
+            --secondary-color: #3498db; /* Azul Brilhante */
+            --background-color: #ecf0f1; /* Cinza Claro */
+            --text-color: #34495e; /* Cinza Escuro */
+            --card-background: #ffffff;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 30px;
-            box-shadow: 0 0 10px #ccc;
-            background: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        img {
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-background);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            width: 140px;
+            border: 4px solid var(--secondary-color);
+            object-fit: cover;
         }
-        h1 {
-            color: #4f8ef7;
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin: 15px 0 5px;
         }
-        a {
-            color: #4f8ef7;
+
+        header h2 {
+            color: var(--secondary-color);
+            font-weight: 400;
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .track-section {
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .track-section h4 {
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        footer {
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
             text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 15px;
+            transition: color 0.3s ease;
         }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Olá, Mundo!</h1>
-    <img src="https://avatars.githubusercontent.com/u/177073024?v=4" alt="Foto de Perfil">
-    <h2>Bem-vindo ao meu site pessoal!</h2>
-    <p>
-        Meu nome é <strong>Felipe Cordeiro Caram</strong>.<br>
-        Este é um exemplo simples de página hospedada no GitHub Pages.
-    </p>
-    <p>
-        <a href="https://github.com/Cordyluz" >Veja meu GitHub</a>
-    </p>
+    <div class="container">
+        <header>
+            <img src="https://avatars.githubusercontent.com/u/177073024?v=4" alt="Foto de Perfil de Felipe Cordeiro Caram">
+            <h1>Felipe Cordeiro Caram</h1>
+            <h2>Estudante de Ciência da Computação - USP</h2>
+        </header>
+
+        <main>
+            <section id="sobre">
+                <h3 class="section-title">Sobre Mim</h3>
+                <p>
+                    Olá! Sou aluno do Bacharelado em Ciência da Computação (BCC) no Instituto de Ciências Matemáticas e de Computação (ICMC) da USP. Sou um entusiasta de tecnologia, fascinado pelo potencial da programação em resolver problemas complexos e gerar inovação.
+                </p>
+            </section>
+
+            <section id="trilhas">
+                <h3 class="section-title">Trilhas de Interesse</h3>
+                <p>
+                    Dentro do meu percurso acadêmico no BCC-USP, meu objetivo é aprofundar meus conhecimentos nas áreas que mais me cativam. Por isso, planejo seguir as seguintes trilhas de especialização:
+                </p>
+                <div class="track-section">
+                    <h4><i class="fas fa-chart-line"></i> Ciência de Dados</h4>
+                    <p>
+                        A capacidade de extrair insights valiosos e tomar decisões estratégicas a partir de grandes volumes de dados é uma habilidade que considero fundamental para o futuro. Tenho grande interesse em aprender sobre modelagem estatística, visualização de dados e as ferramentas que transformam dados brutos em conhecimento.
+                    </p>
+                </div>
+                <div class="track-section">
+                    <h4><i class="fas fa-robot"></i> Inteligência Artificial</h4>
+                    <p>
+                        Sou fascinado por criar sistemas que podem aprender, raciocinar e interagir. A trilha de Inteligência Artificial me permitirá explorar áreas como Machine Learning, Redes Neurais e Processamento de Linguagem Natural, campos que estão na vanguarda da inovação tecnológica atual.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <h3 class="section-title">Conecte-se Comigo</h3>
+            <div class="social-links">
+                <a href="https://github.com/Cordyluz" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/seu-usuario" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+        </footer>
+    </div>
 </body>
 </html>
